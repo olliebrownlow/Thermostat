@@ -20,7 +20,7 @@ Thermostat.prototype.powerSavingMode = function() {
 Thermostat.prototype.up = function() {
   if (this._temp === this._MAX_TEMP_PSM_OFF && this._isPowerSavingMode === false) throw "Maximum temp is 32 degrees";
   if (this._temp === this._MAX_TEMP_PSM_ON && this._isPowerSavingMode === true) throw "Power Saving Mode is on: Maximum temp is 25 degrees";
-  return this._temp++;
+  this._temp++;
 }
 
 Thermostat.prototype.down = function() {
